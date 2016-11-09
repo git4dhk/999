@@ -1,21 +1,115 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>博客主站-技术支持</title>
-    <style >
-      .main-page{
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>博客主站-技术支持</title>
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <style type="text/css">
+      .main-page {}
+      
+      html,
+      body {
+        /*background: #F2F2F2;*/
+      }
+      
+      body {
+        padding: 20px;
+      }
+      
+      h2 {
+        text-align: center;
+        line-height: 80px;
+      }
+      
+      .mui-content>div>div>div {
+        text-indent: 30px;
+        line-height: 30px;
+        color: #333333;
+      }
+      
+      .mui-scroll-wrapper {
+        left: 2% !important;
+        right: 2% !important;
+        width: 96% !important;
+      }
+      
+      .mui-scroll>div {
+        text-indent: 30px;
+        line-height: 30px;
+      }
+      
+      h3 {
+        line-height: 50px;
+        color: #038af3;
+      }
+      li{
+        text-indent: 0;
       }
     </style>
-	</head>
-	<body>
+  </head>
 
-    <div class="main-page">
-
+  <body>
+    <div class="mui-content mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <h2>MUI/Hbuilder项目使用心得</h2>
+        <div>
+          使用Hbuilder／MUI大概有2年时间了，其中接触的项目有3个，都是属于中大型的业务型项目，目前已上线的有两个，另一个项目正在开发中。MUI框架确实给我目前的项目带来了极大的方便，我自己在使用过程中也有很多的体会。
+        </div>
+        <div>
+          <h3>适用场景 </h3>
+          <div>
+            当然这个话题本身并不成立，MUI/Hbuilder可以适用任何可见的场景，只是看设计和开发人员如何利用这个框架。其优势比较明显的就是跨平台打包，代码可以重复使用，实现一次开发，代码运行于多平台。我个人以为，MUI可能更适合纯业务型和交易型的app，对于游戏类和复杂的娱乐型app，会有很多的不方便。
+          </div>
+        </div>
+        <div>
+          <h3>使用理由</h3>
+          <div>
+            当初选择这个框架，是因为MUI提供的有比较全面的UI控件，例如按钮，列表，侧滑导航和侧滑菜单等，这些控件平时使用的概率非常高，所以非常有必要，再加上这些控件的性能和可靠性有比较好的表现，也是我最终选择MUI的一个重要理由。另一个重要原因就是使用html后的跨平台特性。我们要求软件在iOS，android，微信端都能够正常运行，并且保证各平台功能差异不能超过10%。自己调研了很多框架，发现只有MUI能够比较快速和方便的实现这个目标，于是最终选择了它。
+          </div>
+        </div>
+        <div>
+          <h3>技术心得</h3>
+          <div>
+            由于我目前所在项目涉及到安全性和保密性，在此不便公开项目的名称和地址。我们的app在iOS和各大主流android市场都有上架，同步上线的还有微信端。这是一款B2B类的商务软件，专为企业设计用来管理自己的业务。目前市场表现良好，app表现也比较流畅。app中涉及到的模块也比较多，例如常用的统计（友盟），地图（百度），推送（个推），支付（微信）模块都有。这些模块在使用过程中都有踩过坑，遇到过麻烦，最终在MUI论坛都找到了帮助，并且Dcloud官方针对反馈的问题的更新速度也比较快，这点值得肯定。
+          </div>
+        </div>
+        <div>
+          <h3>优化建议</h3>
+          <div>
+            根据我自己使用过程中遇到的问题，有一些改进建议和问题需要反馈给MUI。
+            <ul>
+              <li>
+                1，MUI很优秀，但是基于eclipse开发的Hbuilder却并没有发挥它的优势。hbuilder常出现提示不弹出，弹出不全不准确，样式不能跨文件链接看源码，没有代码优化建议，针对冗余样式和方法不能标注和警告，这一点没有webstorm好用。如果是基于intellij的社区版二次开发是否会更好。
+              </li>
+              <li>
+                2，部分控件仍不能达到很好的兼容性，例如多tab的下拉刷新，样式很不好看；默认实现方式的下拉刷新在android和iOS下表现不一致，而且跟侧滑菜单有冲突，我们项目最后废弃了MUI的下拉刷新，用的是isscroll实现刷新功能；
+              </li>
+              <li>
+                3，消息提示（toast）缺乏回调，这个会有一些不方便，而且也不能自定义样式；
+              </li>
+              <li>
+                4，使用5+Sdk中的plus.geolocation.watchPosition方法一直报错，提示无可用的模块；
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>写在最后</h3>
+          <div>
+            无论如何，我都非常感激DCloud和MUI给我的开发和项目提供了极大的便利，曾经对比过APICloud，phonegap，Facebook React，最终选择了MUI是对其最直接的肯定和赞美，也希望MUI在成功的这条路上越走越远。
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/mui.min.js"></script>
+      <script type="text/javascript">
+        mui.ready(function() {
+          mui('.mui-scroll-wrapper').scroll();
+        });
+      </script>
     </div>
-    <div>
+  </body>
 
-    </div>
-	</body>
 </html>
